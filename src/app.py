@@ -12,9 +12,13 @@ def fetch_weather(lat: float, lon: float) -> dict:
     return response.json()["current"]
 
 def display_weather(data: dict) -> None:
-    print(f"Temperature: {data['temperature_2m']} °C")
-    print(f"Humidity: {data['relativehumidity_2m']} %")
-    print(f"Wind Speed: {data['windspeed_10m']} km/h")
+    print("=" * 30)
+    print("     Doha Weather — Live")
+    print("=" * 30)
+    print(f"  Temperature : {data['temperature_2m']} °C")
+    print(f"  Humidity    : {data['relativehumidity_2m']} %")
+    print(f"  Wind Speed  : {data['windspeed_10m']} km/h")
+    print("=" * 30)
 
 def main():
     DOHA_LAT = 25.2854
